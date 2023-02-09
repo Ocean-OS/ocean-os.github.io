@@ -1,4 +1,3 @@
-if(window.location.hostname !== "mc.drewnolt.repl.co"){document.body.innerHTML = "";}
 var canvas = document.getElementById("overlay");
 var ctx = canvas.getContext("2d");
 ctx.canvas.width  = window.innerWidth;
