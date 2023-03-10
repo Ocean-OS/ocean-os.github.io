@@ -1,0 +1,46 @@
+<title>IDE for JS and HTML</title>
+<style>
+  body{
+    background-color: black;
+    color: white;
+    font-family: roboto, sans-serif;
+  }
+  .window{
+    outline: none;
+    border: 2px gray solid;
+    align: right;
+    border-radius: 2px;
+  }
+  .code{
+    font-family: monospace;
+    border-radius: 2px; 
+    overflow-x: scroll;
+    overflow-y: scroll;
+    width: 800px;
+    height: 1000px;
+  }
+  .run{
+    color: white;
+    background-color: rgb(27, 161, 52);
+    outline: none;
+    border: 1px rgb(18, 117, 36) solid;
+  }
+</style>
+<body>
+  <div class="header">
+    <b>IDE</b><button class="run">Run</button>
+  </div>
+  <div class="window">
+    <iframe src = "data:text/html;charset=utf-8," width = "10%" height="10%"></iframe>
+  </div>
+  <div class="code" contenteditable = "true" onkeypress="save()">
+  </div>
+  <script>
+    function save() {
+      localStorager.setItem("");
+    }
+  </script>
+  
+  
+ 
+  
