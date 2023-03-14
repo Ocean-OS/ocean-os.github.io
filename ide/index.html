@@ -1,13 +1,9 @@
 <title>IDE for JS and HTML</title>
 <style>
   body{
-    background-color: black;
+    background-color: darkgray;
     color: white;
     font-family: roboto, sans-serif;
-  }
-  #frame{
-    border:none;
-    outline: none;
   }
   .window{
     outline: none;
@@ -40,9 +36,7 @@
   <div class="header">
     <b>IDE</b><button class="run">Run</button>
   </div>
-  <div class="window">
-    <iframe id="frame"src = "data:text/html;charset=utf-8," width = "10%" height="10%"></iframe>
-  </div>
+    <iframe class="window"src = "data:text/html;charset=utf-8," width = "10%" height="10%"></iframe>
   <div class="code" contenteditable = "true" onkeypress="save()">
   </div>
   <script>
@@ -50,7 +44,7 @@
       localStorage.setItem("code", document.getElementByClassName("code").innerText);
     }
     function run() {
-      document.getElementById("frame").src = "date:text/html;charset=utf-8,"+document.getElementByClassName("code").innerText;
+      document.getElementByClassName("window").src = "date:text/html;charset=utf-8,"+document.getElementByClassName("code").innerText;
     }
   </script>
   
