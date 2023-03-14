@@ -1,21 +1,25 @@
 <title>IDE for JS and HTML</title>
 <style>
   body{
-    background-color: darkgray;
+    background-color: rgb(20,20,20);
     color: white;
     font-family: roboto, sans-serif;
+  }
+  .main{
+    background-color: rgb(10,10,10);
   }
   .window{
     outline: none;
     border: 2px gray solid;
-    align: right;
+    float: right;
     border-radius: 2px;
     width: 40%;
     height: 40%;
   }
   .code{
+    background-color: black;
     outline:none;
-    align: left;
+    float: left;
     border: 2px gray solid; 
     font-family: monospace;
     border-radius: 2px; 
@@ -36,9 +40,10 @@
   <div class="header">
     <b>IDE</b><button class="run">Run</button>
   </div>
+  <div class="main">
     <iframe class="window"src = "data:text/html;charset=utf-8," width = "10%" height="10%"></iframe>
   <div class="code" contenteditable = "true" onkeypress="save()">
-  </div>
+    </div></div>
   <script>
     function save() {
       localStorage.setItem("code", document.getElementByClassName("code").innerText);
