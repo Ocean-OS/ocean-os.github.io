@@ -48,6 +48,9 @@
   <div class="code" contenteditable = "true" onkeypress="save()">
     </div></div>
   <script>
+    window.onload = function(){
+      document.getElementByClassName("code").innerText = localStorage.getItem("code");
+    }
     function save() {
       localStorage.setItem("code", document.getElementByClassName("code").innerText);
     }
