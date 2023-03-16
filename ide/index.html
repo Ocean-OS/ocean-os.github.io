@@ -50,12 +50,13 @@
   <script>
     window.onload = function(){
       document.getElementByClassName("code").innerText = localStorage.getItem("code");
+      document.getElementByClassName("code").textContent = localStorage.getItem("code");
     }
     function save() {
-      localStorage.setItem("code", document.getElementByClassName("code").innerText);
+      localStorage.setItem("code", document.getElementByClassName("code").innerText||document.getElementByClassName("code").textContent);
     }
     function run() {
-      document.getElementByClassName("window").src = "date:text/html;charset=utf-8,"+document.getElementByClassName("code").innerText;
+      document.getElementByClassName("window").src = "date:text/html;charset=utf-8,"+document.getElementByClassName("code").innerText||document.getElementByClassName("code").textContent;
     }
   </script>
   
