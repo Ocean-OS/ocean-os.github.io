@@ -27,7 +27,7 @@
     overflow-x: scroll;
     overflow-y: scroll;
     width: 800px;
-    height: 1000px;
+    height: 900px;
   }
   .run{
     color: white;
@@ -38,10 +38,13 @@
     width: 50px;
     height: 20px;
   }
+  .saveInfo{
+    color: white;
+  }
 </style>
 <body>
   <div class="header">
-    <b>IDE</b><button class="run" onclick="run()">Run</button>
+    <b>IDE</b><button class="run" onclick="run()">Run</button>&nbsp;<button class="save" onclick="save()">Save</button><span class="saveInfo">This will save the code <b>locally</b> to your computer via localStorage. If you clear your cache, you will lose your code.</span>
   </div>
   <div class="main">
     <iframe class="window" src = "data:text/html;charset=utf-8," width = "10%" height="10%"></iframe>
