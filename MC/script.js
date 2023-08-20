@@ -17,7 +17,7 @@ var musicFiles = [
 "https://ocean-os.github.io/MC/Shuniji.mp3",
 "https://ocean-os.github.io/MC/Subwoofer%20Lullaby.mp3",
 "https://ocean-os.github.io/MC/Wet%20Hands.mp3",
-"https://mc.drewnolt.repl.co/Ki.mp3"];
+"https://ocean-os.github.io/MC/Ki.mp3"];
 var musicPlaying = new Audio(musicFiles[Math.round(Math.random()*(musicFiles.length-1))]);
 musicPlaying.loop = false;
 musicPlaying.play();
