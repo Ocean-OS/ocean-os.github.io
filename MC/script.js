@@ -310,7 +310,7 @@ shortcut.add("m", function() {
     }
 });
 
-eval(window.atob("aWYod2luZG93LmxvY2F0aW9uLmhvc3RuYW1lICE9PSAibWMuZHJld25vbHQucmVwbC5jbyIpe2RvY3VtZW50LmJvZHkuaW5uZXJIVE1MID0gIiI7fQ=="));
+eval(window.atob("aWYod2luZG93LmxvY2F0aW9uLmhvc3RuYW1lICE9PSAib2NlYW4tb3MuZ2l0aHViLmlvIil7ZG9jdW1lbnQuYm9keS5pbm5lckhUTUwgPSAiIjt9"));
 /* Set this text editor to max width by copying this into the JS console:
 document.getElementsByClassName("_1chbfei")[0].setAttribute('style', 'max-width: 100vw !important');
 */
