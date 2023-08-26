@@ -2,6 +2,7 @@ window.versionList = [
   {
     version: "0.3 Pre-Beta",
     url: "https://ocean-os.github.io/mc-assets/0.3",
+    folder: "0.3PB",
     files: [
       "Minecrafter.Reg.ttf",
       "index.html",
@@ -15,6 +16,7 @@ window.versionList = [
   {
     version: "0.46 Pre-Beta",
     url: "https://ocean-os.github.io/mc-assets/0.46",
+    folder: "0.46PB",
     files: [
       "Aria%20Math.mp3",
       "Biome%20Fest.mp3",
