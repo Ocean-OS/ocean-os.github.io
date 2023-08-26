@@ -1,0 +1,62 @@
+
+
+<!DOCTYPE html>
+<!--
+https://MC.drewnolt.repl.co
+Mine.craft Version 0.3 Beta
+Now with more trees!
+All credit goes to Mojang. This is an unapproved, unofficial Minecraft game. 
+Controls:
+    
+ * Right-click (or ctrl click for mac users) - place block
+ * Left-click - remove block
+ * Q - sprint
+ * Delete - Forced restart (wipes the world and changes seeds)
+ * T - Reload Textures
+ * W - walk forward
+ * S - walk backward
+ * A - walk left
+ * D - walk right
+ * E - open inventory
+ * B - toggle super Breaker
+ * Z - Zoom
+ * X - Quake Pro FOV (Z to return to normal)
+ * Arrow Keys - look around
+ * P or Esc - pause/unpause
+ * 1-9 navigate hotbar
+ * Spacebar - jump
+ * Double jump - toggle flight
+ * Shift (flying) - fly down
+ * Space (flying) - fly up
+ * ;  -  Release the pointer without pausing (for screenshots)                  In case anyone's curious about the trees, here are the odds of each tree type spawning:                             10% - Birch                                20% - Jungle                             30% - Spruce                               40% - Oak
+-->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Mine.craft</title>
+	</head>
+	<style>
+		body {
+			overflow: hidden; /* Hide scrollbars */
+		}
+    @font-face {
+	    font-family: Minecraft;
+	    src: url("minecraft.ttf");
+    }
+    @font-face {
+      font-family: Minecrafter;
+      src: url("Minecrafter.Reg.ttf");
+      }
+	</style>
+    <body>
+      <audio id="audio" autoplay="true" loop>
+        <source src="minecraft.mp3">
+      </audio>
+      
+    <canvas id="overlay" tabindex="0" width="600" height="600" style="position: absolute; top: 0px; left: 0px"></canvas>
+      <!--<script>var canvas = document.getElementById("overlay"); canvas.addEventListener(click), function(){if(audio.paused){audio.play();}}</script>-->
+	<script src="script.js">
+</script>
+    </body>
+</html>
