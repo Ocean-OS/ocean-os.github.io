@@ -8,7 +8,8 @@ window.versionList = [
       "main.js",
       "minecraft.mp3",
       "minecraft.ttf",
-      "script.js"
+      "script.js",
+      "main.js"
     ],
   },
   {
