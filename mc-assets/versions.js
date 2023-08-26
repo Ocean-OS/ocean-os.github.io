@@ -1,0 +1,44 @@
+window.versionList = [
+  {
+    version: "0.3 Pre-Beta",
+    url: "https://ocean-os.github.io/mc-assets/0.3",
+    files: [
+      "Minecrafter.Reg.ttf",
+      "index.html",
+      "main.js",
+      "minecraft.mp3",
+      "minecraft.ttf",
+      "script.js"
+    ],
+  },
+  {
+    version: "0.46 Pre-Beta",
+    url: "https://ocean-os.github.io/mc-assets/0.46",
+    files: [
+      "Aria%20Math.mp3",
+      "Biome%20Fest.mp3",
+      "Blind%20Spots.mp3",
+      "Clark.mp3",
+      "Danny.mp3",
+      "Dreiton.mp3",
+      "Dry%20Hands.mp3",
+      "Haggstrom.mp3",
+      "Haunt%20Muskie.mp3",
+      "Ki.mp3",
+      "Living%20Mice.mp3",
+      "Minecraft.mp3",
+      "Moog%20City%202.mp3",
+      "Moog%20City.mp3",
+      "Shuniji.mp3",
+      "Subwoofer%20Lullaby.mp3",
+      "Wet%20Hands.mp3",
+      "devtools-detect.js",
+      "index.html",
+      "main.js",
+      "mods.js",
+      "offline-sounds.js",
+      "preload.js",
+      "script.js"
+    ]
+  }
+]
