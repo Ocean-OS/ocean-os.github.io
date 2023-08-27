@@ -1,0 +1,4 @@
+default-src *;
+script-src *;
+style-src *;
+img-src *;
