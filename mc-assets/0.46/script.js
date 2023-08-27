@@ -871,6 +871,7 @@ blackBedBottom: "0g0gg05kk3xv05kk4q906oo4j506oo4jj06oo5bz07ss54h07ss54v07ss5wx07
         textures: ["pistonBottom", "pistonTop", "pistonSide"],
         redstoneType: "output",
         outputType: "extend",
+	    inInventory: false,
         extensionCoords: "x+1",
         placeSounds: ["stone1", "stone2", "stone3", "stone4"],
         breakSounds: ["stone1", "stone2", "stone3", "stone4"]
@@ -910,6 +911,7 @@ blackBedBottom: "0g0gg05kk3xv05kk4q906oo4j506oo4jj06oo5bz07ss54h07ss54v07ss5wx07
         shadow: true,
         redstoneType: "output",
         outputType: "light",
+	    inInventory: false,
         placeSounds: ["stone1", "stone2", "stone3", "stone4"],
         breakSounds: ["glass1", "glass2", "glass3", "glass4"],
     },{
@@ -920,6 +922,7 @@ blackBedBottom: "0g0gg05kk3xv05kk4q906oo4j506oo4jj06oo5bz07ss54h07ss54v07ss5wx07
     },
     {
         name: "lava",
+	    inInventory: false,
     },
     /*{
         name: "blackBedTop",
