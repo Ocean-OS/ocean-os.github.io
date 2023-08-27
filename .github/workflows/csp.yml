@@ -1,0 +1,21 @@
+name: Apply CSP Header
+
+on:
+  push:
+    branches:
+      - main  # Adjust this based on your default branch name
+
+jobs:
+  apply-csp:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Apply CSP Header
+        run: |
+          CSP_CONTENT=$(cat csp.txt)
+          echo "Content-Security-Policy: $CSP_CONTENT" >> $GITHUB_WORKSPACE/_headers
+          cat $GITHUB_WORKSPACE/_headers
+        shell: bash
