@@ -1,22 +1,22 @@
 //Music
 var musicFiles = [
-  "./Aria%20Math.mp3",
-"./Biome%20Fest.mp3",
-"./Blind%20Spots.mp3",
+  "./Aria Math.mp3",
+"./Biome Fest.mp3",
+"./Blind Spots.mp3",
 "./Clark.mp3",
 "./Danny.mp3",
 "./Dreiton.mp3",
-"./Dry%20Hands.mp3",
+"./Dry Hands.mp3",
 "./Haggstrom.mp3",
-"./Haunt%20Muskie.mp3",
-"./Living%20Mice.mp3",
-"./Mice%20On%20Venus.mp3",
+"./Haunt Muskie.mp3",
+"./Living Mice.mp3",
+"./Mice On Venus.mp3",
 "./Minecraft.mp3",
-"./Moog%20City%202.mp3",
-"./Moog%20City.mp3",
+"./Moog City 2.mp3",
+"./Moog City.mp3",
 "./Shuniji.mp3",
-"./Subwoofer%20Lullaby.mp3",
-"./Wet%20Hands.mp3",
+"./Subwoofer Lullaby.mp3",
+"./Wet Hands.mp3",
 "./Ki.mp3"];
 var musicPlaying = new Audio(musicFiles[Math.round(Math.random()*(musicFiles.length-1))]);
 musicPlaying.loop = false;
