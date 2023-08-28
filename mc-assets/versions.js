@@ -4,11 +4,9 @@ window.versionList = [
     url: "https://ocean-os.github.io/mc-assets/0.3",
     folder: "0.3PB",
     files: [
-      "Minecrafter.Reg.ttf",
       "index.html",
       "main.js",
       "minecraft.mp3",
-      "minecraft.ttf",
       "script.js",
       "main.js"
     ],
