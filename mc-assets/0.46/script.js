@@ -1,4 +1,6 @@
 //Do not try to run this in a webpage. This will only work in the launcher. 
+const version = "0.46 Pre-Beta";
+window.version = version;
 window.addEventListener('devtoolschange', event => {
 	if(event.detail.isOpen){
         console.log("%c" + "Hold Up!", "color: #7289DA; -webkit-text-stroke: 2px black; font-size: 72px; font-weight: bold;");
