@@ -231,7 +231,7 @@ window.addEventListener('devtoolschange', event => {
     var possibleScripts = 
     [
         {
-            script: "window.inventory.hotbar[0-8] = (insert block id here)",
+            script: "window.inventory.hotbar[0-8].id = (insert block id here)",
             description: "Change any slot in your hotbar."
         },
         {
@@ -1768,7 +1768,7 @@ var boxVerts = newFloat32Array([
         for (var i = 1; i < blockData.length; i++) {
             var data = [];
             var block = blockData[i];
-            console.log(block.name)
+            //console.log(block.name)
             for (var j = 0; j < 12; j++) {
                 data.push(hexagonVerts[j * 3 + 0] * scale);
                 data.push(hexagonVerts[j * 3 + 1] * scale);
@@ -2486,7 +2486,7 @@ function runCommand(command, element) {
                     var commandScriptReplace = "('" + commandScript + "')";
                     commandScript = eval(`${commandScriptReplace}.replace(/\\\$${commandInfo.parameters[commandVarReplace]}/g,'"' + ${commandParse[commandVarReplace]} + '"')`);
                 }
-                console.log(commandScript);
+                //console.log(commandScript);
                 eval(commandScript);
                 //return commandScript;
             }else{
@@ -2518,8 +2518,8 @@ function runCommand(command, element) {
                 }
             }
         }
-        console.log(world);
-        console.log(getSaveString())
+        //console.log(world);
+        //console.log(getSaveString())
         var pos = hitBox.pos;
         if (pos && pos[1] > minHeight && pos[1] < maxHeight) {
             //var blockReplaceAir = t;
@@ -2638,7 +2638,7 @@ function runCommand(command, element) {
                         if (redstoneInputs.length > 0) {
                             for (var inputEval = 0; inputEval < redstoneInputs.length; inputEval++) {
                                 if (redstoneInputs[inputEval][3] == true) {
-                                    console.log(redstoneInputs);
+                                    //console.log(redstoneInputs);
                                     if(blockData[holding].outputType == "explosion"){
                                     var strength = blockData[holding].explosionStrength;
                                     activateExplosion(redstoneInputs[inputEval][0], redstoneInputs[inputEval][1], redstoneInputs[inputEval][2], strength, true);
@@ -4497,7 +4497,7 @@ function runCommand(command, element) {
                 textureCoords[textureMap.hitbox][i] = textureCoords[textureMap.hitbox][2] + 0.01;
                 textureCoords[textureMap.hitbox][i + 1] = textureCoords[textureMap.hitbox][1] + 0.01;
             }
-            console.log(textureCoords);
+            //console.log(textureCoords);
         }
         )();
 
@@ -5137,7 +5137,7 @@ function runCommand(command, element) {
     var backgroundImage;
 
     function initEverything() {
-        console.log("Initializing world.");
+        //console.log("Initializing world.");
 
         worldSeed = random(2000000000);
         window.worldSeed = worldSeed;
