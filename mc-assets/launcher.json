@@ -1,0 +1,20 @@
+{
+  announcement: {
+    announce: true,
+    header: "Hey, OGs!",
+    content: "Hey, this launcher is currently in Alpha testing,\n and many features are incomplete or nonexistent,\n as this was just created in August 2023.\n Anyways, have fun!"
+  },
+  launcher-content: {
+    background-photo: {
+      bg: false,
+      url: "",
+      width: 0,
+      height: 0,
+    }
+  },
+  launcher-data: {
+    title: "Mine.craft Launcher",
+    version: "0.1 Alpha",
+    id: "m.c.l.0.1.a"
+  }
+}
