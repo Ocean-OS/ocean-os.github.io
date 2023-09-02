@@ -10,12 +10,12 @@ function getModFiles() {
         var justCreated = true;
     }
     if(justCreated !== true){
-        var modFileDir = fs.readdirSync(__dirname + '/mods');
+        var modFileDir = fs.readdirSync(path.join(__dirname, 'mods'));
         window.gameModFiles = [];
         for(var modFileGet = 0; modFileGet < modFileDir.length; modFileGet++){
-            if(path.extname(__dirname + '/mods/' + modFileDir[modFileGet]) == ".js"){
-                window.gameModFiles.push(fs.readFileSync(__dirname + '/mods/' + modFileDir[modFileGet], "utf8"));
-                eval(fs.readFileSync(__dirname + '/mods/' + modFileDir[modFileGet], "utf8"));
+            if(path.extname(path.join(__dirname, 'mods') + modFileDir[modFileGet]) == ".js"){
+                window.gameModFiles.push(fs.readFileSync(path.join(__dirname, 'mods') + modFileDir[modFileGet], "utf8"));
+                eval(fs.readFileSync(path.join(__dirname, 'mods') + modFileDir[modFileGet], "utf8"));
             }
         }
     }
