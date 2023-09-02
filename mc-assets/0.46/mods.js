@@ -1,6 +1,26 @@
 localStorage.clear();
+const fs = require('fs');
+const path = require('path');
 var gameMods = [];
 window.gameShaders = [];
+function getModFiles() {
+    var justCreated;
+    if (!fs.existsSync(__dirname + '/mods')){
+        fs.mkdirSync(__dirname + '/mods');
+        var justCreated = true;
+    }
+    if(justCreated !== true){
+        var modFileDir = fs.readdirSync(__dirname + '/mods');
+        window.gameModFiles = [];
+        for(var modFileGet = 0; modFileGet < modFileDir.length; modFileGet++){
+            if(path.extname(__dirname + '/mods/' + modFileDir[modFileGet]) == ".js"){
+                window.gameModFiles.push(fs.readFileSync(__dirname + '/mods/' + modFileDir[modFileGet], "utf8"));
+                eval(fs.readFileSync(__dirname + '/mods/' + modFileDir[modFileGet], "utf8"));
+            }
+        }
+    }
+}
+
 //Mod Checker and Analyzer
 /*if(gameMods.length > 0){
     localStorage.getItem("modsActive", "true");
@@ -41,28 +61,4 @@ function runMods(){
 }
 function getModIds() {
     return allMods;
-}
-function runShaders() {
-    if(window.shaderLoaded){
-    if(window.gameShaders !== []){
-        var shaderData = [];
-        shaderData.push(true);
-        var shaderToRun = window.gameShaders[0]; // Runs only one shader to avoid crashes
-        if(shaderToRun.blockRender !== ""){
-            shaderData.push(eval("JSON.stringify({blockRender: true, script: '" + shaderToRun.blockRender + "'}))"));
-        }else{
-            shaderData.push(JSON.stringify({blockRender: false}));
-        }
-        if(shaderToRun.shadowRender !== ""){
-            shaderData.push(eval("JSON.stringify({shadowRender: true, script: '" + shaderToRun.shadowRender + "'}))"));
-        }else{
-            shaderData.push(JSON.stringify({shadowRender: false}));
-        }
-    }else{
-        shaderData.push(false);
-    }
-    return shaderData;
-    }else{
-        return [false];
-    }
 }
