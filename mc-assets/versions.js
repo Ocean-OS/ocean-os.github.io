@@ -8,7 +8,8 @@ window.versionList = [
       "main.js",
       "minecraft.mp3",
       "script.js",
-      "main.js"
+      "main.js",
+      "icon.ico"
     ],
   },
   {
@@ -39,7 +40,8 @@ window.versionList = [
       "mods.js",
       "offline-sounds.js",
       "preload.js",
-      "script.js"
+      "script.js",
+      "icon.ico"
     ]
   }
 ]
