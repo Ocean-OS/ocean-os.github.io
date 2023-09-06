@@ -1,8 +1,8 @@
 window.versionList = [
   {
-    version: "0.3 Pre-Beta",
+    version: "0.3 Pre-Alpha",
     url: "https://ocean-os.github.io/mc-assets/0.3",
-    folder: "0.3PB",
+    folder: "0.3PA",
     files: [
       "index.html",
       "main.js",
@@ -13,9 +13,9 @@ window.versionList = [
     ],
   },
   {
-    version: "0.46 Pre-Beta",
+    version: "0.46 Pre-Alpha",
     url: "https://ocean-os.github.io/mc-assets/0.46",
-    folder: "0.46PB",
+    folder: "0.46PA",
     files: [
       "Aria%20Math.mp3",
       "Biome%20Fest.mp3",
