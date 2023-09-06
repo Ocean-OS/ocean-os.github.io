@@ -1,5 +1,5 @@
 //Do not try to run this in a webpage. This will only work in the launcher. 
-const version = "0.46 Pre-Beta";
+const version = "0.46 Pre-Alpha";
 window.version = version;
 getModFiles();
 /**
