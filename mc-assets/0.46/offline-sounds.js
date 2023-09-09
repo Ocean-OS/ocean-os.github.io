@@ -17,7 +17,9 @@ var musicFiles = [
 "./Shuniji.mp3",
 "./Subwoofer Lullaby.mp3",
 "./Wet Hands.mp3",
-"./Ki.mp3"];
+"./Ki.mp3",
+"./Chris.mp3",
+"./Beginning.mp3"];
 var musicPlaying = new Audio(musicFiles[Math.round(Math.random()*(musicFiles.length-1))]);
 musicPlaying.loop = false;
 musicPlaying.play();
