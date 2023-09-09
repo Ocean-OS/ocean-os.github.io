@@ -41,7 +41,9 @@ window.versionList = [
       "offline-sounds.js",
       "preload.js",
       "script.js",
-      "icon.ico"
+      "icon.ico",
+      "Chris.mp3",
+      "Beginning.mp3"
     ]
   }
 ]
