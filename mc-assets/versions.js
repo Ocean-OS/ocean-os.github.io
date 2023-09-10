@@ -17,6 +17,7 @@ window.versionList = [
     url: "https://ocean-os.github.io/mc-assets/0.46",
     folder: "0.46PA",
     files: [
+      "icon.ico",
       "Aria%20Math.mp3",
       "Biome%20Fest.mp3",
       "Blind%20Spots.mp3",
@@ -42,8 +43,7 @@ window.versionList = [
       "mods.js",
       "offline-sounds.js",
       "preload.js",
-      "script.js",
-      "icon.ico"
+      "script.js"
     ]
   }
 ]
