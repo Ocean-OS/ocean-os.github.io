@@ -34,6 +34,8 @@ window.versionList = [
       "Shuniji.mp3",
       "Subwoofer%20Lullaby.mp3",
       "Wet%20Hands.mp3",
+      "Chris.mp3",
+      "Beginning.mp3",
       "devtools-detect.js",
       "index.html",
       "main.js",
@@ -41,9 +43,7 @@ window.versionList = [
       "offline-sounds.js",
       "preload.js",
       "script.js",
-      "icon.ico",
-      "Chris.mp3",
-      "Beginning.mp3"
+      "icon.ico"
     ]
   }
 ]
