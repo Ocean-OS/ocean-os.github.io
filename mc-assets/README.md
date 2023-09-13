@@ -17,7 +17,7 @@
   - The game textures and block data
   - The game's block sound effects (block breaking and placing sounds, explosion sounds, etc)
   - Basically, everything other than mod loading.
-- Most versions after 0.3 Pre-Beta contain a mods.js file. This is the mod loading script. It does the following:
+- Most versions after 0.3 Pre-Alpha contain a mods.js file. This is the mod loading script. It does the following:
   - Loads each mod file into a variable
   - Creates an ID for each mod
   - Checks the mod (checks to see if the version matches, and checks the mod script to make sure it doesn't break the game)
