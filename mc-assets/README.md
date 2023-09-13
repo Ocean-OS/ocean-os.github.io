@@ -1,6 +1,7 @@
 # mc-assets
 - This is the repository that the Mine.craft launcher[currently in alpha testing] fetches from. 
-- Do not try to copy these files, they will not run in a browser. 
+- Do not try to copy these files, they will not run in a browser.
+- A repository dedicated to this will soon be made. 
 ## File Directory
 ### Folders
 - Each folder holds a version.
