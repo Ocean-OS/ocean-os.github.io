@@ -26,6 +26,7 @@
 - This is the "directory" script for the launcher.
 - This includes the urls to fetch different versions from, all the filenames in each version folder, and how to save each version as.
 - This script is fetched and saved every time the launcher is opened.
+- Soon, this may contain information such as a changelog to display, any alerts, and icons for each version.
 ## The launcher
 The Mine.craft Launcher can be found [here](https://github.com/Ocean-OS/mc-launcher). It downloads the game versions and runs them through [Electron](https://github.com/electron/electron) 25.0.1. 
 ##### Last updated September 13, 2023
