@@ -14,7 +14,7 @@ window.versionList = [
   },
   {
     version: "0.46a Pre-Alpha",
-    url: "https://ocean-os.github.io/mc-assets/0.46a",
+    url: "https://ocean-os.github.io/mc-assets/0.46",
     folder: "0.46aPA",
     files: [
       "index.html",
