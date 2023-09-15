@@ -11,6 +11,7 @@ window.versionList = [
       "main.js",
       "icon.ico"
     ],
+    changelog: "The first released version of Mine.craft! This version has only one biome: Forest. Basically just bare bones. Have fun!"
   },
   {
     version: "0.46a Pre-Alpha",
@@ -44,6 +45,7 @@ window.versionList = [
       "offline-sounds.js",
       "preload.js",
       "script.js"
-    ]
+    ],
+    changelog: "The second released version of Mine.craft! There were a few versions in between, but they were either unstable or just didn't work well (if you're curious, the names of these versions were: 0.33, 0.4, 0.43). This version added working TNT, a Desert biome and a Cherry biome, block breaking and placing sounds, mod support, a bigger soundtrack, water, and many more blocks! Enjoy!"
   }
 ]
