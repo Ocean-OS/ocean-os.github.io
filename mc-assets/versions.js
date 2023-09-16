@@ -81,6 +81,6 @@ window.versionList = [
       "preload.js",
       "script.js"
     ],
-    changelog: "A minor update to 0.46a, this version introduces a new chunk rerendering system; to activate it, press R (when F3 is on). This version also adds a few new splash texts, procedurally chosen trees types, distance-based block breaking/placing sound volume, and changes the crosshair, among a few other small changes. Enjoy!"
+    changelog: "A minor update to 0.46a, this version introduces a new chunk rerendering system; to activate it, press R (when F3 is on). This version also adds a few new splash texts, procedurally chosen trees types, distance-based block breaking/placing sound volume, savable settings, and changes the crosshair, among a few other small changes. Enjoy!"
   }
 ]
