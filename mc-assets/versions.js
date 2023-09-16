@@ -47,5 +47,40 @@ window.versionList = [
       "script.js"
     ],
     changelog: "The second released version of Mine.craft! There were a few versions in between, but they were either unstable or just didn't work well (if you're curious, the names of these versions were: 0.33, 0.4, 0.43). This version added working TNT, a Desert biome and a Cherry biome, block breaking and placing sounds, mod support, a bigger soundtrack, water, and many more blocks! Enjoy!"
+  },
+  {
+    version: "0.46b Pre-Alpha",
+    url: "https://ocean-os.github.io/mc-assets/0.46b",
+    folder: "0.46bPA",
+    files: [
+      "index.html",
+      "main.js",
+      "icon.ico",
+      "Aria%20Math.mp3",
+      "Biome%20Fest.mp3",
+      "Blind%20Spots.mp3",
+      "Clark.mp3",
+      "Danny.mp3",
+      "Dreiton.mp3",
+      "Dry%20Hands.mp3",
+      "Haggstrom.mp3",
+      "Haunt%20Muskie.mp3",
+      "Ki.mp3",
+      "Living%20Mice.mp3",
+      "Minecraft.mp3",
+      "Moog%20City%202.mp3",
+      "Moog%20City.mp3",
+      "Shuniji.mp3",
+      "Subwoofer%20Lullaby.mp3",
+      "Wet%20Hands.mp3",
+      "Chris.mp3",
+      "Beginning.mp3",
+      "devtools-detect.js",
+      "mods.js",
+      "offline-sounds.js",
+      "preload.js",
+      "script.js"
+    ],
+    changelog: "A minor update to 0.46a, this version introduces a new chunk rerendering system; to activate it, press R (when F3 is on). This version also adds a few new splash texts, procedurally chosen trees types, and changes the crosshair, among a few other small changes. Enjoy!"
   }
 ]
