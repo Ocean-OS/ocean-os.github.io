@@ -1075,7 +1075,7 @@ blackBedBottom: "0g0gg05kk3xv05kk4q906oo4j506oo4jj06oo5bz07ss54h07ss54v07ss5wx07
         name: "polishedGranite",
         placeSounds: ["stone1", "stone2", "stone3", "stone4"],
         breakSounds: ["stone1", "stone2", "stone3", "stone4"]
-    }, { name: "netherPortal"},
+    }, { name: "netherPortal",inInventory:false},
     {
         name: "obsidian",
         unbreakableTNT: true,
