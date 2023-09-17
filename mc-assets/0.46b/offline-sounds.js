@@ -47,7 +47,7 @@ musicPlaying.oncanplaythrough = function(){
   }
 }
 musicPlaying.onpause = function(){
-    if(!musicPause && musicPlaying.canplaythrough){
+    if(!musicPause){
         musicPlaying.play();
     }
 }
