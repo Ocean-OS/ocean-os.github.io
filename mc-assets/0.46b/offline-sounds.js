@@ -36,10 +36,14 @@ musicPlaying.addEventListener("ended", function(){
   while(gettingMusic && lastMusic !== musicPlaying.src){
     try{
       musicPlaying.src = musicFiles[Math.round(Math.random()*(musicFiles.length-1))];
-      gettingMusic = false;
     }catch(err){}
+    if(musicPlaying.src !== lastMusic){
+      lastMusic = musicPlaying.src;
+      gettingMusic = false;
+    }else{
+      gettingMusic = true;
+    }
   }
-  lastMusic = musicPlaying.src;
 });
 musicPlaying.oncanplaythrough = function(){
   if(!musicPause && !gettingMusic){
