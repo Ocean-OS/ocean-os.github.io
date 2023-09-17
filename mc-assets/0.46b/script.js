@@ -2533,14 +2533,28 @@ var surroundingBlocks = function(x,y,z){
                     var soundsForBreak = blockData[world.getBlock(hitBox.pos[0], hitBox.pos[1], hitBox.pos[2])].breakSounds;
                     var blockBreakSound = soundsForBreak[Math.round(Math.random() * (blockData[world.getBlock(hitBox.pos[0], hitBox.pos[1], hitBox.pos[2])].breakSounds.length - 1))];
                     var playBreakSound = new Audio(blockSounds[soundNames.indexOf(blockBreakSound)]);
-                    playBreakSound.volume = Math.abs((reach+1-(distance(p.x, p.y, p.z, hitBox.pos[0], hitBox.pos[1], hitBox.pos[2])))/reach);
+			if(Math.abs((reach+1-(distance(p.x, p.y, p.z, hitBox.pos[0], hitBox.pos[1], hitBox.pos[2])))/reach) > 1){
+				var vol = 1;
+			}else if(Math.abs((reach+1-(distance(p.x, p.y, p.z, hitBox.pos[0], hitBox.pos[1], hitBox.pos[2])))/reach) < 0){
+				var vol = 0;
+			}else{
+				var vol = Math.abs((reach+1-(distance(p.x, p.y, p.z, hitBox.pos[0], hitBox.pos[1], hitBox.pos[2])))/reach);
+			}
+                    playBreakSound.volume = vol;
                     playBreakSound.loop = false;
                     playBreakSound.play();
                 } else if (blockData[t].placeSounds !== undefined) {
                     var soundsForPlace = blockData[t].placeSounds;
                     var blockPlaceSound = soundsForPlace[Math.round(Math.random() * (soundsForPlace.length - 1))];
                     var playPlaceSound = new Audio(blockSounds[soundNames.indexOf(blockPlaceSound)]);
-                    playPlaceSound.volume = Math.abs((reach+1-(distance(p.x, p.y, p.z, hitBox.pos[0], hitBox.pos[1], hitBox.pos[2])))/reach);
+			if(Math.abs((reach+1-(distance(p.x, p.y, p.z, hitBox.pos[0], hitBox.pos[1], hitBox.pos[2])))/reach) > 1){
+				var vol = 1;
+			}else if(Math.abs((reach+1-(distance(p.x, p.y, p.z, hitBox.pos[0], hitBox.pos[1], hitBox.pos[2])))/reach) < 0){
+				var vol = 0;
+			}else{
+				var vol = Math.abs((reach+1-(distance(p.x, p.y, p.z, hitBox.pos[0], hitBox.pos[1], hitBox.pos[2])))/reach);
+			}
+                    playPlaceSound.volume = vol;
                     playPlaceSound.loop = false;
                     playPlaceSound.play();
                 }
