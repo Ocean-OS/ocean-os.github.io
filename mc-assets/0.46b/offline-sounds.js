@@ -20,13 +20,29 @@ var musicFiles = [
 "./Ki.mp3",
 "./Chris.mp3",
 "./Beginning.mp3"];
-var musicPlaying = new Audio(musicFiles[Math.round(Math.random()*(musicFiles.length-1))]);
+var lastMusic;
+var musicPlaying = new Audio();
+var gettingMusic = true;
+while(gettingMusic){
+  try{
+    musicPlaying.src = musicFiles[Math.round(Math.random()*(musicFiles.length-1))];
+    gettingMusic = false;
+  }catch(err){}
+}
+lastMusic = musicPlaying.src;
 musicPlaying.loop = false;
 musicPlaying.addEventListener("ended", function(){
-    musicPlaying.src = musicFiles[Math.round(Math.random()*(musicFiles.length-1))];
+  var gettingMusic = true;
+  while(gettingMusic && lastMusic !== musicPlaying.src){
+    try{
+      musicPlaying.src = musicFiles[Math.round(Math.random()*(musicFiles.length-1))];
+      gettingMusic = false;
+    }catch(err){}
+  }
+  lastMusic = musicPlaying.src;
 });
 musicPlaying.oncanplaythrough = function(){
-  if(!musicPause){
+  if(!musicPause && !gettingMusic){
     musicPlaying.play();
   }
 }
