@@ -23,33 +23,38 @@ var musicFiles = [
 var lastMusic;
 var musicPlaying = new Audio();
 var gettingMusic = true;
-while(gettingMusic){
+var musicUnverifiedFiles = [];
+var musicVerifiedFiles = [];
+for(var musicCheck = 0; musicCheck < musicFiles.length; musicCheck++){
   try{
-    musicPlaying.src = musicFiles[Math.round(Math.random()*(musicFiles.length-1))];
-    gettingMusic = false;
-  }catch(err){}
+    musicPlaying.src = musicFiles[musicCheck];
+  }catch(err){
+    musicUnverifiedFiles.push(musicCheck);
+  }
 }
+for(var musicAdd = 0; musicAdd < musicFiles.length; musicAdd++){
+  if(!musicFiles.includes(musicUnverifiedFiles[musicAdd])){
+    musicVerifiedFiles.push(musicFiles[musicAdd]);
+  }
+}
+musicFiles = musicVerifiedFiles;
+musicPlaying.src = musicFiles[Math.round(Math.random()*(musicFiles.length-1))];
 lastMusic = musicPlaying.src;
 musicPlaying.loop = false;
+musicPlaying.play();
 musicPlaying.addEventListener("ended", function(){
   var gettingMusic = true;
   while(gettingMusic && lastMusic !== musicPlaying.src){
-    try{
-      musicPlaying.src = musicFiles[Math.round(Math.random()*(musicFiles.length-1))];
-    }catch(err){}
+    musicPlaying.src = musicFiles[Math.round(Math.random()*(musicFiles.length-1))];
     if(musicPlaying.src !== lastMusic){
       lastMusic = musicPlaying.src;
+      musicPlaying.play();
       gettingMusic = false;
     }else{
       gettingMusic = true;
     }
   }
 });
-musicPlaying.oncanplaythrough = function(){
-  if(!musicPause && !gettingMusic){
-    musicPlaying.play();
-  }
-}
 musicPlaying.onpause = function(){
     if(!musicPause){
         musicPlaying.play();
