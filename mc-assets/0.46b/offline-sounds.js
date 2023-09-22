@@ -25,9 +25,12 @@ var musicPlaying = new Audio();
 var gettingMusic = true;
 var musicUnverifiedFiles = [];
 var musicVerifiedFiles = [];
+var checkingMusic = true;
 for(var musicCheck = 0; musicCheck < musicFiles.length; musicCheck++){
   try{
     musicPlaying.src = musicFiles[musicCheck];
+    musicPlaying.play();
+    musicPlaying.pause();
   }catch(err){
     musicUnverifiedFiles.push(musicCheck);
   }
@@ -38,6 +41,7 @@ for(var musicAdd = 0; musicAdd < musicFiles.length; musicAdd++){
   }
 }
 musicFiles = musicVerifiedFiles;
+checkingMusic = false;
 musicPlaying.src = musicFiles[Math.round(Math.random()*(musicFiles.length-1))];
 lastMusic = musicPlaying.src;
 musicPlaying.loop = false;
