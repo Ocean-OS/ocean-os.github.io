@@ -19,13 +19,15 @@ var musicFiles = [
 "./Wet Hands.mp3",
 "./Ki.mp3",
 "./Chris.mp3",
-"./Beginning.mp3"];
+"./Beginning.mp3",
+"./otherside.mp3"];
 var lastMusic;
 var musicPlaying = new Audio();
 var gettingMusic = true;
 var musicUnverifiedFiles = [];
 var musicVerifiedFiles = [];
 var checkingMusic = true;
+const fs = require('fs');
 for(var musicCheck = 0; musicCheck < musicFiles.length; musicCheck++){
   if(!fs.existsSync(musicFiles[musicCheck])){
     musicUnverifiedFiles.push(musicFiles[musicCheck]);
