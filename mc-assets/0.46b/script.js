@@ -267,7 +267,9 @@ function isElectron() {
 
     return false;
 }
-getModFiles();
+window.addEventListener('DOMContentLoaded', () => {
+	getModFiles();
+});
 var minHeight = 0;
 var loadedWorld = false;
 var splash;
