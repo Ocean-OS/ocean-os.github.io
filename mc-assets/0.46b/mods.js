@@ -87,7 +87,6 @@ var musicFiles = [
 "Chris.mp3",
 "Beginning.mp3",
 "otherside.mp3"];
-window.addEventListener('DOMContentLoaded', () => {
 var lastMusic;
 var musicPlaying = new Audio();
 var gettingMusic = true;
@@ -128,4 +127,3 @@ musicPlaying.onpause = function(){
         musicPlaying.play();
     }
 }
-});
