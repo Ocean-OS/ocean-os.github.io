@@ -1,6 +1,4 @@
 localStorage.clear();
-const fs = require('fs');
-const path = require('path');
 var gameMods = [];
 window.gameShaders = [];
 function getModFiles() {
