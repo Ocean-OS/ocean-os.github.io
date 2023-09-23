@@ -27,7 +27,9 @@ var gettingMusic = true;
 var musicUnverifiedFiles = [];
 var musicVerifiedFiles = [];
 var checkingMusic = true;
-const fs = require('fs');
+if(typeof fs == 'undefined'){
+  const fs = require('fs');
+}
 for(var musicCheck = 0; musicCheck < musicFiles.length; musicCheck++){
   if(!fs.existsSync(musicFiles[musicCheck])){
     musicUnverifiedFiles.push(musicFiles[musicCheck]);
