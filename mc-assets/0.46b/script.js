@@ -1,9 +1,7 @@
 //Do not try to run this in a webpage. This will only work in the launcher. 
 const version = "0.46b Pre-Alpha";
 window.version = version;
-window.addEventListener('DOMContentLoaded', () => {
-	getModFiles();
-});
+getModFiles();
 /**
  * http://www.openjs.com/scripts/events/keyboard_shortcuts/
  * Version : 2.01.B
