@@ -78,7 +78,6 @@ window.versionList = [
       "Beginning.mp3",
       "devtools-detect.js",
       "mods.js",
-      "offline-sounds.js",
       "preload.js",
       "script.js"
     ],
