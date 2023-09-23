@@ -111,8 +111,7 @@ musicPlaying.loop = false;
 musicPlaying.play();
 musicPlaying.addEventListener("ended", function(){
   var gettingMusic = true;
-  while(gettingMusic && lastMusic !== musicPlaying.src){
-    musicPlaying.src = musicFiles[Math.round(Math.random()*(musicFiles.length-1))];
+  /*while(gettingMusic && lastMusic !== musicPlaying.src){
     if(musicPlaying.src !== lastMusic){
       lastMusic = musicPlaying.src;
       musicPlaying.play();
@@ -120,7 +119,10 @@ musicPlaying.addEventListener("ended", function(){
     }else{
       gettingMusic = true;
     }
-  }
+  }*/
+    musicPlaying.src = musicFiles[Math.round(Math.random()*(musicFiles.length-1))];
+    musicPlaying.play();
+    gettingMusic = false;
 });
 musicPlaying.onpause = function(){
     if(!musicPause){
