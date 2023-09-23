@@ -71,6 +71,7 @@ window.versionList = [
       "Moog%20City%202.mp3",
       "Moog%20City.mp3",
       "Shuniji.mp3",
+      "otherside.mp3",
       "Subwoofer%20Lullaby.mp3",
       "Wet%20Hands.mp3",
       "Chris.mp3",
