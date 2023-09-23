@@ -94,7 +94,7 @@ var musicUnverifiedFiles = [];
 var musicVerifiedFiles = [];
 var checkingMusic = true;
 for(var musicCheck = 0; musicCheck < musicFiles.length; musicCheck++){
-  if(!fs.existsSync(path.join(__dirname, musicFiles[musicCheck])){
+  if(!fs.existsSync(path.join(__dirname, musicFiles[musicCheck]))){
     musicUnverifiedFiles.push(musicFiles[musicCheck]);
   }
 }
