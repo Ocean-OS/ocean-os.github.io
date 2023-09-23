@@ -21,15 +21,13 @@ var musicFiles = [
 "./Chris.mp3",
 "./Beginning.mp3",
 "./otherside.mp3"];
+window.onload = function(){
 var lastMusic;
 var musicPlaying = new Audio();
 var gettingMusic = true;
 var musicUnverifiedFiles = [];
 var musicVerifiedFiles = [];
 var checkingMusic = true;
-if(typeof fs !== 'object'){
-  const fs = require('fs');
-}
 for(var musicCheck = 0; musicCheck < musicFiles.length; musicCheck++){
   if(!fs.existsSync(musicFiles[musicCheck])){
     musicUnverifiedFiles.push(musicFiles[musicCheck]);
@@ -63,4 +61,5 @@ musicPlaying.onpause = function(){
     if(!musicPause){
         musicPlaying.play();
     }
+}
 }
