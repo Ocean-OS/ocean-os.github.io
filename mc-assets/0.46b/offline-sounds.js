@@ -27,7 +27,7 @@ var gettingMusic = true;
 var musicUnverifiedFiles = [];
 var musicVerifiedFiles = [];
 var checkingMusic = true;
-if(typeof fs == 'undefined'){
+if(typeof fs !== 'object'){
   const fs = require('fs');
 }
 for(var musicCheck = 0; musicCheck < musicFiles.length; musicCheck++){
