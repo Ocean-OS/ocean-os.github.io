@@ -1,6 +1,7 @@
 //Do not try to run this in a webpage. This will only work in the launcher. 
 const version = "0.46b Pre-Alpha";
 window.version = version;
+window.onload = function(){
 getModFiles();
 /**
  * http://www.openjs.com/scripts/events/keyboard_shortcuts/
@@ -5799,4 +5800,5 @@ function hackPack() {
 var experimentalFeature = function(id) {
     var betaFeatures = ["minHeight = -200", ""];
     eval(betaFeatures[id - 1]);
+}
 }
