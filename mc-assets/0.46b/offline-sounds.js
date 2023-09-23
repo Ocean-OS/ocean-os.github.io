@@ -27,12 +27,8 @@ var musicUnverifiedFiles = [];
 var musicVerifiedFiles = [];
 var checkingMusic = true;
 for(var musicCheck = 0; musicCheck < musicFiles.length; musicCheck++){
-  try{
-    musicPlaying.src = musicFiles[musicCheck];
-    musicPlaying.play();
-    musicPlaying.pause();
-  }catch(err){
-    musicUnverifiedFiles.push(musicCheck);
+  if(!fs.existsSync(musicFiles[musicCheck]){
+    musicUnverifiedFiles.push(musicFiles[musicCheck]);
   }
 }
 for(var musicAdd = 0; musicAdd < musicFiles.length; musicAdd++){
