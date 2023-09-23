@@ -66,27 +66,27 @@ function getModIds() {
 }
 //Music
 var musicFiles = [
-  "./Aria Math.mp3",
-"./Biome Fest.mp3",
-"./Blind Spots.mp3",
-"./Clark.mp3",
-"./Danny.mp3",
-"./Dreiton.mp3",
-"./Dry Hands.mp3",
-"./Haggstrom.mp3",
-"./Haunt Muskie.mp3",
-"./Living Mice.mp3",
-"./Mice On Venus.mp3",
-"./Minecraft.mp3",
-"./Moog City 2.mp3",
-"./Moog City.mp3",
-"./Shuniji.mp3",
-"./Subwoofer Lullaby.mp3",
-"./Wet Hands.mp3",
-"./Ki.mp3",
-"./Chris.mp3",
-"./Beginning.mp3",
-"./otherside.mp3"];
+  "Aria Math.mp3",
+"Biome Fest.mp3",
+"Blind Spots.mp3",
+"Clark.mp3",
+"Danny.mp3",
+"Dreiton.mp3",
+"Dry Hands.mp3",
+"Haggstrom.mp3",
+"Haunt Muskie.mp3",
+"Living Mice.mp3",
+"Mice On Venus.mp3",
+"Minecraft.mp3",
+"Moog City 2.mp3",
+"Moog City.mp3",
+"Shuniji.mp3",
+"Subwoofer Lullaby.mp3",
+"Wet Hands.mp3",
+"Ki.mp3",
+"Chris.mp3",
+"Beginning.mp3",
+"otherside.mp3"];
 window.onload = function(){
 var lastMusic;
 var musicPlaying = new Audio();
@@ -95,7 +95,7 @@ var musicUnverifiedFiles = [];
 var musicVerifiedFiles = [];
 var checkingMusic = true;
 for(var musicCheck = 0; musicCheck < musicFiles.length; musicCheck++){
-  if(!fs.existsSync(musicFiles[musicCheck])){
+  if(!fs.existsSync(path.join(__dirname, musicFiles[musicCheck])){
     musicUnverifiedFiles.push(musicFiles[musicCheck]);
   }
 }
