@@ -78,6 +78,7 @@ window.versionList = [
       "otherside.mp3",
       "Beginning.mp3",
       "otherside.mp3",
+      "otherside.mp3",
       "devtools-detect.js",
       "mods.js",
       "preload.js",
