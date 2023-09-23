@@ -2,17 +2,7 @@
 const version = "0.46b Pre-Alpha";
 window.version = version;
 window.addEventListener('DOMContentLoaded', () => {
-	if(typeof window.fs == 'undefined'){
-		const fs = require('fs');
-		window.fs = fs;
-	}
-	if(typeof window.path == 'undefined'){
-		const path = require('path');
-		window.path = path;
-	}
-	if(typeof window.path == 'object' && typeof window.fs == 'object'){
-		getModFiles();
-	}
+	getModFiles();
 });
 /**
  * http://www.openjs.com/scripts/events/keyboard_shortcuts/
@@ -277,9 +267,6 @@ function isElectron() {
 
     return false;
 }
-window.addEventListener('DOMContentLoaded', () => {
-	getModFiles();
-});
 var minHeight = 0;
 var loadedWorld = false;
 var splash;
