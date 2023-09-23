@@ -22,6 +22,14 @@ var musicFiles = [
 "./Beginning.mp3",
 "./otherside.mp3"];
 window.onload = function(){
+  if(typeof window.fs == 'undefined'){
+		const fs = require('fs');
+		window.fs = fs;
+	}
+	if(typeof window.path == 'undefined'){
+		const path = require('path');
+		window.path = path;
+	}
 var lastMusic;
 var musicPlaying = new Audio();
 var gettingMusic = true;
