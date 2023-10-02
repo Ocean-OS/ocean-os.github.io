@@ -5616,7 +5616,7 @@ var surroundingBlocks = function(x,y,z){
             if (screen === "main menu") {
                 ctx.fillStyle = "white";
                 fastText("Not an official Minecraft service. Not approved by or associated with Mojang or Microsoft.", 355, height - 10, 10);
-                fastText("v" + version, width - 60, height - 10, 10);
+                fastText("v" + version, width - 70, height - 10, 10);
                 if (loadedWorld) {
                     strokeWeight(3.5);
                     hud(false);
