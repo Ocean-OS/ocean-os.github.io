@@ -4,6 +4,7 @@ const modOtherScript = "function newBlock(json){if(!window.blockData.includes(js
 const fs = require('fs');
 const path = require('path');
 var gameMods = [];
+window.gameMods = [];
 window.gameShaders = [];
 function getModFiles() {
     var justCreated;
@@ -12,47 +13,41 @@ function getModFiles() {
         var justCreated = true;
     }
     if(justCreated !== true){
-        var modFileDir = fs.readdirSync(path.join(__dirname,"mods"));
+        var modFileDir = fs.readdirSync(__dirname + "\\mods");
         window.gameModFiles = [];
+        window.blockData = [];
+        window.textures = [];
         for(var modFileGet = 0; modFileGet < modFileDir.length; modFileGet++){
-            if(path.extname(path.join(__dirname,"mods", modFileDir[modFileGet])) == ".js"){
-                window.gameModFiles.push(fs.readFileSync(path.join(__dirname, "mods",modFileDir[modFileGet]), "utf8"));
-                eval(fs.readFileSync(path.join(__dirname, "mods", modFileDir[modFileGet]), "utf8") + modOtherScript);
+            if(path.extname(__dirname + "\\mods\\" + modFileDir[modFileGet]) == ".js"){
+                window.gameModFiles.push(fs.readFileSync(__dirname + "\\mods\\" + modFileDir[modFileGet], "utf8"));
+                eval(fs.readFileSync(__dirname + "\\mods\\" + modFileDir[modFileGet], "utf8") + modOtherScript);
             }
         }
     }
 }
-
-//Mod Checker and Analyzer
-/*if(gameMods.length > 0){
-    localStorage.getItem("modsActive", "true");
-    var modNames = [];
-    while(modNames.length < gameMods.length){
-        modNames.push(gameMods[modNames.length].name);
-    }   
-}else{localStorage.setItem("modsActive", "false")}
-*/
 function runMods(){
+    window.blockData = [];
+    window.textures = [];
     var modsRun = 0;
     var modIds = [];
-    if(gameMods.length > 0){
+    if(window.gameMods.length > 0){
         localStorage.setItem("modsActive", "true");
     }else{
         localStorage.setItem("modsActive", "false");
     }
-    while(modsRun !== gameMods.length){
-        gameMods[modsRun].id = modsRun.toString();
+    while(modsRun !== window.gameMods.length){
+        window.gameMods[modsRun].id = modsRun.toString();
         if(gameMods[modsRun].version !== version){
             console.log("Error: " + gameMods[modsRun].name + " Mod failed to run, version is not compatible");
         }else{
             const modSafetyCheck = /((window)[\.;])|(atob)|(Buffer(\.from\(|;))|(location(\.|;))|(document(;|\.))/g;
-            if(modSafetyCheck.test(gameMods[modsRun].script)){
-                console.log(gameMods[modsRun].name + " Mod seems suspicious, skipping mod.");
+            if(modSafetyCheck.test(window.gameMods[modsRun].script)){
+                console.log(window.gameMods[modsRun].name + " Mod seems suspicious, skipping mod.");
             }else{
-            eval("try{" + gameMods[modsRun].script + modScript);
+            eval("try{" + window.gameMods[modsRun].script + modScript);
             console.log("Run " + gameMods[modsRun].name + " Mod Successfully.");}
         }
-        modIds.push(gameMods[modsRun].id);
+        modIds.push(window.gameMods[modsRun].id);
         modsRun++;
     }
     console.log("Ran all available mods");
@@ -63,7 +58,8 @@ function runMods(){
 }
 function getModIds() {
     return allMods;
-}//Music
+}
+//Music
 var musicFiles = [
   "Aria Math.mp3",
 "Biome Fest.mp3",
