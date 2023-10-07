@@ -86,7 +86,7 @@ window.versionList = [
     ],
     changelog: "A minor update to 0.46a, this version introduces a new chunk rerendering system; to activate it, press R (when F3 is on). This version also adds a few new splash texts, procedurally chosen trees types, distance-based block breaking/placing sound volume, savable settings, and changes the crosshair, among a few other small changes. Enjoy!"
   },
-  /*{
+  {
   version: "0.48 Pre-Alpha",
   url: "https://ocean-os.github.io/mc-assets/0.48",
   folder: "0.48PA",
@@ -124,6 +124,6 @@ window.versionList = [
       "preload.js",
       "script.js"
       ],
-      changelog: "A somewhat big update to 0.46b, 0.48 improves how TNT behaves, changes gravity when underwater, adds new music and splash text, adds view bobbing, and stained glass. Have fun!",
-}*/
+      changelog: "A somewhat big update to 0.46b, 0.48 improves how TNT behaves, changes gravity when underwater, adds new music and splash text, adds view bobbing, changes how mods work, adds FOV in settings, and stained glass. Have fun!",
+}
 ]
