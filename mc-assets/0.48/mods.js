@@ -12,18 +12,26 @@ function getModFiles() {
         var justCreated = true;
     }
     if(justCreated !== true){
-        var modFileDir = fs.readdirSync(__dirname + "\\mods");
+        var modFileDir = fs.readdirSync(path.join(__dirname,"mods"));
         window.gameModFiles = [];
-        window.blockData = [];
-        window.textures = [];
         for(var modFileGet = 0; modFileGet < modFileDir.length; modFileGet++){
-            if(path.extname(__dirname + "\\mods\\" + modFileDir[modFileGet]) == ".js"){
-                window.gameModFiles.push(fs.readFileSync(__dirname + "\\mods\\" + modFileDir[modFileGet], "utf8"));
-                eval(fs.readFileSync(__dirname + "\\mods\\" + modFileDir[modFileGet], "utf8") + modOtherScript);
+            if(path.extname(path.join(__dirname,"mods", modFileDir[modFileGet])) == ".js"){
+                window.gameModFiles.push(fs.readFileSync(path.join(__dirname, "mods",modFileDir[modFileGet]), "utf8"));
+                eval(fs.readFileSync(path.join(__dirname, "mods", modFileDir[modFileGet]), "utf8") + modOtherScript);
             }
         }
     }
 }
+
+//Mod Checker and Analyzer
+/*if(gameMods.length > 0){
+    localStorage.getItem("modsActive", "true");
+    var modNames = [];
+    while(modNames.length < gameMods.length){
+        modNames.push(gameMods[modNames.length].name);
+    }   
+}else{localStorage.setItem("modsActive", "false")}
+*/
 function runMods(){
     var modsRun = 0;
     var modIds = [];
@@ -55,8 +63,7 @@ function runMods(){
 }
 function getModIds() {
     return allMods;
-}
-//Music
+}//Music
 var musicFiles = [
   "Aria Math.mp3",
 "Biome Fest.mp3",
