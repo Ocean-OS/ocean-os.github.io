@@ -1331,10 +1331,14 @@ const fuseSoundFile = "data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2Zj
         }
     }*/
     for(var modBlockLoad = 0; modBlockLoad < window.blockData.length; modBlockLoad++){
-        blockData.push(JSON.parse(window.blockData[modBlockLoad]));
+        if(JSON.stringify(window.blockData[modBlockLoad-1]) !== JSON.stringify(window.blockData[modBlockLoad]) || modBlockLoad == 0){
+            blockData.push((window.blockData[modBlockLoad]));
+        }
     }
     for(var textureLoad = 0; textureLoad < window.textures.length; textureLoad++){
-        textures.push(JSON.parse(window.textures[textureLoad]));
+        if(JSON.stringify(window.textures[textureLoad-1]) !== JSON.stringify(window.textures[textureLoad]) || textureLoad == 0){
+        textures.push((window.textures[textureLoad]));
+        }
     }
     localStorage.clear();
     var blockIdMakeArray = [];
@@ -6205,6 +6209,7 @@ try {
     document.getElementById("overlay").remove();
     document.body.style = "font-family: roboto, sans-serif; background-color: rgb(30,30,30); color: white;";
     document.body.innerHTML = "<style>a:visited{color:blue;text-decoration:none;}a:hover{color:blue;text-decoration:none;}</style><img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAA5CAYAAABXoymnAAAAAXNSR0IArs4c6QAAAw1JREFUWEftlktoE2EQx79Ns3k/sKRt0rSlIiFFjdV6tSAWXxUfhyJeRA8e9KRHwYMHb54UPAgiiHjQg3ooxBdeWvGiFG0PkgZFxcSWphrTdEtMzUpmMmuym+2mZevmsLnM98332P/8ZnayHFvHX/wAE8vXDz9lnNpjVBf00KWbgNEhjIR+h1/Wj4geSPtWipz2NESgaQTY3ai7sKikIY9eK/drIvDfBRD6Db0WEByIecBmpvISglyqBGOLlbHSMrp5J9q9j9WrX5XA86NYcIU8Y/IHC9+X4JyQ+SMJcAVaYOwKORmtz7wvgm9NRWi4gImLPBBwtNqYxYbRCTMYuSuIbL0bw/+qsGpUmP8Bs2wCbSMkFK+hYQIIfc9uH0Y9u8SEOcx1axQj90d7wPL+Niluq6e9aoxkMq/v15DIfsbq3PNAVAQsOUwBYyc5KL5AzFUptCCzBzphXMikwdrbELEjuENRhI7QCON9u8C/kLgA9uujW2C5CmcRWwbbekmQyEuDphHQPuDFwtveL0VeXMDO5wp3g+3Y90ZBoOwo5l6BP5+8DtbqQWLL+RSSnPsI9svopHReQcAwAfQWdA1iv+fdNkmlv28LjOcn3oHddCYurVHeq5FQDXij18BN82IWCSTvPqklMH6KEzefPYi4hJ9gc9MJNvs2C+MWG4Jyd/BgY5exM8p/lILM2DlY8kSG8M5KCmg/paI8h5sNF/DiGBODO7HbdR85Djb97CHjvZiGxTR+gfSOnADr33ZnRQKfbh+CdV8EO6cj1Fd3v0TAcAFTV5wiRU7R/Zo8zT7cvAfKbR78IBm4+ls1knL+6fXzRM7DPnmBUo1M39gv3QM1YKiAZH9nzSc3SYuXsNKHLZXvK1nseq1zpgCTgEnAJGA4AVEU63ZC1aav8wLXdAK6woN1Y/yWGgc/rdOcNsv9WvfQOQUBrYPrLkAtIrmf5qslI8erWgNakRouQB65XJAWSdUa0DqoVWxaxalbChp9kFoqdSOwWmINE9C54aleZ3wnNPzPyBRgEjAJmASMJvAX5CUeZapTq9oAAAAASUVORK5CYII='><center><h1>Unexpected Error Occurred</h1> <p>This <i>probably</i> wasn't your fault, try <a href='javascript:window.location.reload()'>restarting your game</a>.</p><p>Error Code: " + errorCodes.indexOf(error.name) + "</p></center>";
+    console.error(error);
     document.title = "Unexpected Error Occurred";
     musicPause = true;
     musicPlaying.pause();
