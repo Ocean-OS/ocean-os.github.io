@@ -8,8 +8,8 @@ window.gameMods = [];
 window.gameShaders = [];
 function getModFiles() {
     var justCreated;
-    if (!fs.existsSync(__dirname + '/mods')){
-        fs.mkdirSync(__dirname + '/mods');
+    if (!fs.existsSync(__dirname + '\\mods')){
+        fs.mkdirSync(__dirname + '\\mods');
         var justCreated = true;
     }
     if(justCreated !== true){
@@ -18,27 +18,27 @@ function getModFiles() {
         window.blockData = [];
         window.textures = [];
         for(var modFileGet = 0; modFileGet < modFileDir.length; modFileGet++){
+            if(window.gameModFiles[window.gameModFiles.length-1] !== fs.readFileSync(__dirname + "\\mods\\" + modFileDir[modFileGet], "utf8") || modFileGet == 0||modFileDir[modFileGet-1] !== modFileDir[modFileGet])
             if(path.extname(__dirname + "\\mods\\" + modFileDir[modFileGet]) == ".js"){
                 window.gameModFiles.push(fs.readFileSync(__dirname + "\\mods\\" + modFileDir[modFileGet], "utf8"));
                 eval(fs.readFileSync(__dirname + "\\mods\\" + modFileDir[modFileGet], "utf8") + modOtherScript);
-                window.gameMods[window.gameMods.length-1] = JSON.parse(window.gameMods[window.gameMods.length-1]);
+                window.gameMods[window.gameMods.length-1] = (window.gameMods[window.gameMods.length-1]);
             }
         }
     }
 }
+
 function runMods(){
     window.blockData = [];
     window.textures = [];
     var modsRun = 0;
-    var modIds = [];
     if(window.gameMods.length > 0){
         localStorage.setItem("modsActive", "true");
     }else{
         localStorage.setItem("modsActive", "false");
     }
     while(modsRun !== window.gameMods.length){
-        window.gameMods[modsRun].id = modsRun.toString();
-        if(window.gameMods[modsRun].version !== version){
+        if(window.gameMods[modsRun].version !== version && (JSON.stringify(window.gameMods[modsRun-1]) !== JSON.stringify(window.gameMods[modsRun])||modsRun == 0)){
             console.log("Error: " + gameMods[modsRun].name + " Mod failed to run, version is not compatible");
         }else{
             const modSafetyCheck = /((window)[\.;])|(atob)|(Buffer(\.from\(|;))|(location(\.|;))|(document(;|\.))/g;
@@ -48,14 +48,10 @@ function runMods(){
             eval("try{" + window.gameMods[modsRun].script + modScript);
             console.log("Run " + gameMods[modsRun].name + " Mod Successfully.");}
         }
-        modIds.push(window.gameMods[modsRun].id);
         modsRun++;
     }
     console.log("Ran all available mods");
-    console.log(modIds);
-    const allMods = modIds;
-    window.mods = gameMods;
-    return modIds;
+    window.mods = window.gameMods;
 }
 function getModIds() {
     return allMods;
