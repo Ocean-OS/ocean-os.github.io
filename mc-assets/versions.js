@@ -94,7 +94,7 @@ window.versionList = [
   
       "index.html",
       "main.js",
-      "icon.ico",
+      "devtools-detect.js",
       "Aria%20Math.mp3",
       "Biome%20Fest.mp3",
       "Blind%20Spots.mp3",
@@ -119,7 +119,7 @@ window.versionList = [
       "Beginning%202.mp3",
       "Mutation.mp3",
       "Dead%20Voxel.mp3",
-      "devtools-detect.js",
+      "Dead%20Voxel.mp3",
       "mods.js",
       "preload.js",
       "script.js"
