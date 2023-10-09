@@ -1,47 +1,10 @@
 
 <!DOCTYPE html>
-<!--
-
-Minecraft Version 0.46 Pre-Beta
-Now with more biomes!
-All credit goes to Mojang and Willard21 on Github. This is an unapproved, unofficial Minecraft game. 
-Controls:
-    
- * Right-click (or ctrl click for mac users) - place block
- * Left-click - remove block
- * Q - remove block from inventory
- * Delete - Forced restart (wipes the world and changes seeds)
- * T(debug) - Reload Textures
- * W - walk forward
- * S - walk backward
- * A - walk left
- * D - walk right
- * E - open inventory
- * B - toggle super Breaker
- * Z - Zoom
- * X - Quake Pro FOV (Z to return to normal)
- * Arrow Keys - look around
- * P(debug) - toggle autopause
- * P or Esc - pause/unpause
- * 1-9 navigate hotbar
- * Spacebar - jump
- * Shift - sneak
- * Double jump - toggle flight
- * Shift (flying) - fly down
- * Space (flying) - fly up
- * ; - Release the pointer without pausing (for screenshots) 
- * F3 - Toggle debug - Show information about the game you're playing, version, stats, etc
- In case anyone's curious about the trees, here are the odds of each tree type spawning in a forest biome: 
- 10% - Birch 
- 20% - Jungle 
- 30% - Spruce 
- 40% - Oak
--->
-
 <html>
     <head>
         <meta charset="utf-8">
         <title>Loading...</title>
+        <script src="./offline-sounds.js"></script><script src="./mods.js"></script>
 
  </head>
  <style>
@@ -83,11 +46,9 @@ body{
    </style>
     <body>
       <canvas id="overlay" tabindex="0" width="600" height="600" style="position: absolute; top: 0px; left: 0px"></canvas>
-      <!--<script>var canvas = document.getElementById("overlay"); canvas.addEventListener(click), function(){if(audio.paused){audio.play();}}</script>-->
- <script src="script.js">
+      <script src="script.js"></script>
+<script type="module">
+  import devtools from './devtools-detect.js';
 </script>
-      <script>
-        alert("Warning: As this isn't really meant to be run in a browser, several features such as mods and experiments are unavailable. ");
-      </script>
     </body>
 </html>
