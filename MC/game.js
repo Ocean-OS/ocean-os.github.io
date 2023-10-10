@@ -1,7 +1,7 @@
 //Do not try to run this in a webpage. This will only work in the launcher. 
 const version = "0.48 Pre-Alpha";
 window.version = version;
-getModFiles();
+
 /**
  * http://www.openjs.com/scripts/events/keyboard_shortcuts/
  * Version : 2.01.B
@@ -275,61 +275,6 @@ var lastKeyPresses = [0];
 window.ticks = 0;
 //var gravityAffectedBlocks = [];
 window.droppedItems = [];
-//Node Packages, do not include in web version. 
-if(isElectron()){
-    try{
-    const os = require('os');
-    const { exec } = require("child_process");
-    const fs = require('fs');
-    const path = require('path');
-    window.worlds = __dirname + "/worlds";
-    if(os.platform() == "darwin") {
-exec("system_profiler | grep GeForce", (error, stdout, stderr) => {
-    if (error) {
-        console.log(`error: ${error.message}`);
-        return;
-    }
-    if (stderr) {
-        console.log(`stderr: ${stderr}`);
-        return;
-    }
-    //console.log(`stdout: ${stdout}`);
-    window.gpu = stdout;
-});
-}else if(os.platform() == "win32"){
-    exec("wmic path win32_VideoController get name", (error, stdout, stderr) => {
-    if (error) {
-        console.log(`error: ${error.message}`);
-        return;
-    }
-    if (stderr) {
-        console.log(`stderr: ${stderr}`);
-        return;
-    }
-    //console.log(`stdout: ${stdout}`);
-    window.gpu = stdout.split("\n")[1];
-});
-}else if(os.platform().includes("linux")){
-    exec("sudo lshw -C display", (error, stdout, stderr) => {
-    if (error) {
-        console.log(`error: ${error.message}`);
-        return;
-    }
-    if (stderr) {
-        console.log(`stderr: ${stderr}`);
-        return;
-    }
-    //console.log(`stdout: ${stdout}`);
-    window.gpu = stdout;
-});
-}else {
-    window.gpu = "Unknown";
-}
-window.os = require('os');
-}catch(err){
-    const isElectron = function(){return false;}
-}
-}
 var waterLevel = 32;
 var autoPause = true;
 var unSneak = false;
