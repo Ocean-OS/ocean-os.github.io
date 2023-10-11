@@ -4726,11 +4726,6 @@ var surroundingBlocks = function(x,y,z){
         if (Key.l) {
             p.spectator = !p.spectator;
         }
-        if (Key.f) {
-            //farlands
-            p.x = 32000000;
-            p.z = 32000000;
-        }
         /*if(Key.slash){
         prompt("hi");
     }*/
