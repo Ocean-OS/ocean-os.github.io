@@ -10,6 +10,7 @@
 - Each version contains a main.js file. This is the file that runs everything.
 - Each version contains an index.html file. This is the "container" file, as it holds the window for the game.
 - Each version contains sound files. These are the soundtrack. Do not copy them.
+- Sound files will soon be converted to a file format similar to txt to improve launcher performance. 
 - Each version contains a script.js file. This is the main game script. This usually includes:
   - The music scripts (if they load slower when separated)
   - Any packages that otherwise would load slow
