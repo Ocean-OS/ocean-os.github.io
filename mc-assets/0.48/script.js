@@ -2728,7 +2728,7 @@ var surroundingBlocks = function(x,y,z){
         world.getBlock(x+1,y,z),
         world.getBlock(x-1,y,z),
         world.getBlock(x,y+1,z),
-        world.getblock(x,y-1,z),
+        world.getBlock(x,y-1,z),
         world.getBlock(x,y,z+1),
         world.getBlock(x,y,z-1)
     ];
