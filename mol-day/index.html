@@ -222,10 +222,9 @@
     <script>
         function showNumber(speed){
             var i = 0;
-            var num = document.getElementById("number").innerHTML;
             setInterval(function(){
                 if(i<602000000000000000000000){
-                    num = num + "O";
+                    document.getElementById("number").innerHTML = document.getElementById("number").innerHTML + "O";
                     i++;
                 }
             },speed);
