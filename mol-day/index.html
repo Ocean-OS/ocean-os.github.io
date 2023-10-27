@@ -211,6 +211,34 @@
         div#number{
             word-wrap: break-word;
         }
+        button{
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(30,30,30);
+            color: white;
+            font-family: Inter;
+        }
+        select{
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(30,30,30);
+            color: white;
+            font-family: Inter;
+        }
+        button:hover{
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(35,35,35);
+            color: white;
+            font-family: Inter;
+        }
+        select:hover{
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(35,35,35);
+            color: white;
+            font-family: Inter;
+        }
     </style>
 </head>
 <body>
@@ -225,6 +253,8 @@
     <script>
         function showNumber(speed,increase){
             document.getElementById("button").disabled = true;
+            document.getElementById("speed").disabled = true;
+            document.getElementById("increase").disabled = true;
             var i = 0;
             var amount = [];
             var o = "";
