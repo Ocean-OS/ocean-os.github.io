@@ -217,6 +217,7 @@
             background-color: rgb(30,30,30);
             color: white;
             font-family: Inter;
+            padding: 5px;
         }
         select{
             border: none;
@@ -224,6 +225,7 @@
             background-color: rgb(30,30,30);
             color: white;
             font-family: Inter;
+            padding: 5px;
         }
         button:hover{
             border: none;
@@ -231,6 +233,7 @@
             background-color: rgb(35,35,35);
             color: white;
             font-family: Inter;
+            padding: 5px;
         }
         select:hover{
             border: none;
@@ -238,6 +241,7 @@
             background-color: rgb(35,35,35);
             color: white;
             font-family: Inter;
+            padding: 5px;
         }
     </style>
 </head>
@@ -249,7 +253,7 @@
     </p>
     <div id="left"><h3>If you had $6.02×10²³, you'd have a lot of money.</h3></div><div id="right"><h3>The universe is nowhere near 6.02×10²³ years old. <small>(It's more like 13.7 billion years old.)</small></h3></div>
     <p>One thing that helps people grasp the size of Avogadro's number is to put it in standard form. Usually, Avogadro's number is displayed in scientific notation, which basically makes really big numbers look pretty small. In standard form, Avogadro's number is around 602,000,000,000,000,000,000,000. But that still doesn't really show the size of that number, it just shows some zeroes. So, here's a way for you to see how big Avogadro's number <i>really</i> is. </p>
-    <br><button id="button" onclick="showNumber(document.getElementById('speed').value,document.getElementById('increase').value)">Show Avogadro's Number</button><span>Pick a speed: </span><input type="range" min="1" max="100" value="10" class="slider" id="speed"><span>Pick an increase: </span><select id="increase"><option>1</option><option>10</option><option>100</option><option>1000</option><option>10000</option><option>100000</option></select><br><p>All of the Os you see will add up to Avogadro's number. There are currently <span id="Os">0</span> Os.</p><br><div id="number"></div>
+    <br><button id="button" onclick="showNumber(100-(document.getElementById('speed').value*1),document.getElementById('increase').value)">Show Avogadro's Number</button><span>Pick a speed: </span><input type="range" min="1" max="100" value="10" class="slider" id="speed"><span>Pick an increase: </span><select id="increase"><option>1</option><option>10</option><option>100</option><option>1000</option><option>10000</option><option>100000</option></select><br><p>All of the Os you see will add up to Avogadro's number. There are currently <span id="Os">0</span> Os.</p><br><div id="number"></div>
     <script>
         function showNumber(speed,increase){
             document.getElementById("button").disabled = true;
