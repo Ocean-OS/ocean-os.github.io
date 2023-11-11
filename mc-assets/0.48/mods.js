@@ -86,20 +86,7 @@ var musicFiles = [
 var lastMusic;
 var musicPlaying = new Audio();
 var gettingMusic = true;
-var musicUnverifiedFiles = [];
-var musicVerifiedFiles = [];
 var checkingMusic = true;
-for(var musicCheck = 0; musicCheck < musicFiles.length; musicCheck++){
-  if(!fs.existsSync(path.join(__dirname, musicFiles[musicCheck]))){
-    musicUnverifiedFiles.push(musicFiles[musicCheck]);
-  }
-}
-for(var musicAdd = 0; musicAdd < musicFiles.length; musicAdd++){
-  if(!musicFiles.includes(musicUnverifiedFiles[musicAdd])){
-    musicVerifiedFiles.push(musicFiles[musicAdd]);
-  }
-}
-musicFiles = musicVerifiedFiles;
 checkingMusic = false;
 musicPlaying.src = musicFiles[Math.round(Math.random()*(musicFiles.length-1))];
 lastMusic = musicPlaying.src;
