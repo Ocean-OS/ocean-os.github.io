@@ -1,7 +1,7 @@
 [
   "./main.js",
   "./index.html",
-  "./mods.js",
+  "./preload.js",
   "./styles.css",
   "./versions.js"
 ]
