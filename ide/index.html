@@ -47,7 +47,7 @@
     <b>IDE</b><button class="run" onclick="run()">Run</button>&nbsp;<button class="save" onclick="save()">Save</button><span class="saveInfo">This will save the code <b>locally</b> to your computer via localStorage. If you clear your cache, you will lose your code.</span>
   </div>
   <div class="main">
-    <iframe class="window" src = "data:text/html;charset=utf-8," width = "10%" height="10%"></iframe>
+    <iframe class="window" src = "window.html" width = "10%" height="10%"></iframe>
   <div class="code" contenteditable = "true" onkeydown="save()">
     </div></div>
   <script>
@@ -61,7 +61,7 @@
     }
     function run() {
       //alert("run")
-      document.getElementByClassName("window").src = "date:text/html;charset=utf-8," + document.getElementByClassName("code").innerText||document.getElementByClassName("code").textContent;
+      //document.getElementByClassName("window").src = "window.html"; //"date:text/html;charset=utf-8," + document.getElementByClassName("code").innerText||document.getElementByClassName("code").textContent;
     }
   </script>
   
