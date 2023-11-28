@@ -56,11 +56,11 @@
       document.getElementByClassName("code").textContent = localStorage.getItem("code");
     }
     function save() {
-      alert("hi");
+      //alert("hi");
       localStorage.setItem("code", document.getElementByClassName("code").innerText||document.getElementByClassName("code").textContent);
     }
     function run() {
-      alert("run")
+      //alert("run")
       document.getElementByClassName("window").src = "date:text/html;charset=utf-8," + document.getElementByClassName("code").innerText||document.getElementByClassName("code").textContent;
     }
   </script>
