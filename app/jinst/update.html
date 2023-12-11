@@ -1,0 +1,19 @@
+<script>
+    async function getUpdates(){
+    var res = await fetch("https://ocean-os.github.io/app/jinst");
+    var version = await res.text();
+    const fs = require('fs');
+    const path = require('path');
+    if(!fs.existsSync(path.join(__dirname,"version.txt"))||fs.readFileSync(path.join(__dirname,"version.txt"),"utf8") !== version){
+        var f = await fetch("https://ocean-os.github.io/app/jinst/dir.js");
+        var files = eval(await f.text());
+        for(var updateDownload = 0; updateDownload < files.length; updateDownload++){
+            var r = await fetch("https://ocean-os.github.io/app/jinst/" + files[updateDownload]);
+            var b = Buffer.from(await r.arrayBuffer());
+            fs.writeFileSync(path.join(__dirname, files[updateDownload]),b);
+        }
+        fs.writeFileSync(path.join(__dirname,"version.txt"),version);
+    }
+    }
+    getUpdates();
+    </script>
