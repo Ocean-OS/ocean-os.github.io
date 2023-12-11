@@ -4,5 +4,6 @@
   "maker.js",
   "index.html",
   "preload.js",
-  "styles.css"
+  "styles.css",
+  "temp.html"
 ]
