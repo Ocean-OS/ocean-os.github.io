@@ -32,4 +32,4 @@
 - Soon, this may contain information such as a changelog to display, any alerts, and icons for each version.
 ## The launcher
 The Mine.craft Launcher can be found [here](https://github.com/Ocean-OS/mc-launcher). It downloads the game versions and runs them through [Electron](https://github.com/electron/electron) 25.0.1. 
-##### Last updated September 13, 2023
+##### Last updated December 12, 2023
