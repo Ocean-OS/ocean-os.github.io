@@ -1,0 +1,2 @@
+# app
+This folder holds update files for any non-Mine.craft app. These update files may be added before the actual app is released, for testing. **This might change soon, and you might not be able to see the files before the app is released.**
