@@ -1,4 +1,5 @@
 const { app, BrowserWindow, Tray, contextBridge, ipcRenderer} = require('electron');
+//App switches insert
 const nativeImage = require('electron').nativeImage
 const path = require('path');
 const os = require('os');
