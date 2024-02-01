@@ -1325,11 +1325,12 @@ const fuseSoundFile = "data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2Zj
     //window.console.log(invBlockIds);
 	try{
     var win = window.parent;
+		var console = win.console;
 	}catch(err){
 		var win = window;
+		var console = win.console;
 	}
     var doc = document;
-    var console = win.console;
     var world;
 
     var newFloat32Array = function(arr) {
