@@ -1323,7 +1323,11 @@ const fuseSoundFile = "data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2Zj
     }
     )();
     //window.console.log(invBlockIds);
+	try{
     var win = window.parent;
+	}catch(err){
+		var win = window;
+	}
     var doc = document;
     var console = win.console;
     var world;
@@ -6061,13 +6065,22 @@ var surroundingBlocks = function(x,y,z){
         analytics.frames++;
         analytics.totalFrameTime += win.performance.now() - frameStart;
         analytics.worstFrameTime = Math.max(win.performance.now() - frameStart, analytics.worstFrameTime);
+	    try{
         window.parent.raf = window.requestAnimationFrame(gameLoop);
+	    }catch(err){
+		    window.raf = window.requestAnimationFrame(gameLoop);
+	    }
     };
     return gameLoop;
 })();
-if (window.parent.raf) {
+if (window.parent.raf || window.raf) {
+	try{
     window.cancelAnimationFrame(window.parent.raf);
     console.log("Canceled", window.parent.raf)
+	}catch(err){
+		window.cancelAnimationFrame(window.raf);
+		console.log("Canceled", window.raf);
+	}
 }
 try {
     init();
